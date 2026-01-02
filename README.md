@@ -35,7 +35,7 @@ Troubleshooting using simulation mode & PDU analysis
 
 ##  🗂️ Projects Included
 
-###  1️⃣ VLAN Segmentation & Inter-VLAN Routing
+###  1️⃣ VLAN Segmentation & Inter-VLAN Routing 👉 Open
 
 VLAN 10/20/30 segmentation
 
@@ -45,7 +45,7 @@ Router-on-a-Stick implementation
 
 Includes topology image + .pkt file
 
-###  2️⃣ OSPF Multi-Area Implementation
+###  2️⃣ OSPF Multi-Area Implementation 👉 Open
 
 OSPF Area 0 backbone
 
@@ -55,7 +55,7 @@ Router-ID configuration
 
 Shows routing table convergence
 
-###  3️⃣ EIGRP Enterprise Network
+###  3️⃣ EIGRP Enterprise Network 👉 Open
 
 Autonomous System configuration
 
@@ -63,7 +63,7 @@ Metric calculation
 
 Load balancing demonstration
 
-###  4️⃣ WAN Topology with RIP v2
+###  4️⃣ WAN Topology with RIP v2 👉 Open
 
 Classless routing
 
@@ -71,7 +71,7 @@ Route summarization
 
 Split-horizon demonstration
 
-###  5️⃣ Network Security Lab
+###  5️⃣ Network Security Lab 👉 Open
 
 Standard & extended ACLs
 
@@ -79,26 +79,11 @@ Port security with sticky MACs
 
 DHCP Snooping & DAI
 
-###  6️⃣ NAT Overload (PAT) Configuration
+###  6️⃣ NAT Overload (PAT) Configuration 👉 Open
 
 Inside/outside NAT configuration
 
 Testing translations with PC traffic
 
-##  🧾 Project Cards
 
-Use these cards for navigation inside your repo (update the links to match your folders):
-
-Project	Description	File
-VLAN Segmentation Lab	Enterprise LAN with VLANs + inter-VLAN routing	👉 Open
-
-OSPF Multi-Area	Multi-area routing with DR/BDR	👉 Open
-
-EIGRP Enterprise Lab	Enterprise routing using EIGRP	👉 Open
-
-RIP v2 WAN Lab	RIP v2 routing & summarization	👉 Open
-
-Security Lab	ACLs, DHCP Snooping, DAI	👉 Open
-
-NAT (PAT) Lab	NAT overload for internet access	👉 Open
 
