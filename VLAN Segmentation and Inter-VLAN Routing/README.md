@@ -32,14 +32,21 @@ VLAN 20 – Sales Department
 
 4 End Devices (PCs)
 
-📸 Topology Diagram
-<p align="center"> <img src="./images/topology.png" alt="VLAN Topology Diagram" width="600"> </p>
+
 🏷️ VLAN Design
 VLAN ID	VLAN Name	Department
 10	HR_Department	Human Resources
 20	Sales_Dept	Sales
+| VLAN ID                                       | VLAN Name       | Department     |
+|-----------------------------------------------|-----------------|----------------|
+| 10                                            | HR_Dept         | Human Resources|
+| 20                                            | Sales_Dept      | Sales          |
+
 🌐 IP Addressing Scheme
-VLAN 10 – HR Department
+| VLAN ID                                       | VLAN Name       | Department     |
+|-----------------------------------------------|-----------------|----------------|
+| 10                                            | HR_Dept         | Human Resources|
+| 20                                            | Sales_Dept      | Sales          |VLAN 10 – HR Department
 Device	IP Address
 PC0	192.168.29.11
 PC1	192.168.20.12
