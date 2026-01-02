@@ -21,9 +21,6 @@ The network consists of two subnets connected via a **Cisco 2911 Router**:
     * **Devices:** Switch1, PC2, Laptop1, Laptop2.
     * **Gateway:** Router G0/1 (`192.168.20.1`).
 
-### 📸 Topology Diagram
-![Network Topology](./images/topology.png)
-*(Ensure your screenshot `Screenshot (398).png` is saved as `topology.png` in an images folder)*
 
 ## ⚙️ Configuration Details
 
