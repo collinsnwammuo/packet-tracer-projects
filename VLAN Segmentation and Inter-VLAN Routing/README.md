@@ -1,42 +1,75 @@
-# VLAN Segmentation and Inter-VLAN Routing
+# 🔹 VLAN Segmentation and Inter-VLAN Routing (Cisco Packet Tracer)
 
-![Cisco Packet Tracer](https://img.shields.io/badge/Cisco-Packet%20Tracer-blue?logo=cisco&logoColor=white)
+![Cisco Packet Tracer](https://img.shields.io/badge/Tool-Cisco%20Packet%20Tracer-blue?style=flat&logo=cisco)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
-## 📖 Project Overview
-This project demonstrates the implementation of **VLAN (Virtual Local Area Network) Segmentation** and **Inter-VLAN Routing** using Cisco Packet Tracer. The network design separates traffic between different departments (HR and Sales) to enhance security and network performance, while using a router to allow controlled communication between these isolated networks.
+## 📌 Project Overview
+This project demonstrates VLAN segmentation and inter-VLAN routing in a simulated enterprise network using **Cisco Packet Tracer**. The network is designed to separate departments into different VLANs while allowing controlled communication between them through a router.
 
-## 🏗️ Network Topology
-The network consists of the following components:
+The lab highlights best practices in **Layer 2 segmentation**, **Layer 3 routing**, and basic **enterprise LAN design**.
 
-* **1 x Router (Cisco 2911):** Configured as the gateway to facilitate routing between the different VLAN subnets.
-* **2 x Switches (Cisco 2960):** * **Switch0:** Dedicated to the **HR Department** (VLAN 10).
-    * **Switch1:** Dedicated to the **Sales Department** (VLAN 20).
-* **4 x End Devices (PCs):** Configured with static IP addresses corresponding to their respective VLAN subnets.
+## 🎯 Objectives
+* Implement VLAN-based network segmentation for multiple departments.
+* Configure access ports and assign VLANs on Cisco switches.
+* Enable inter-VLAN communication using a router.
+* Verify connectivity between hosts across different VLANs.
+* Reinforce practical understanding of VLANs, routing, and subnetting.
 
-### Diagram
-![Network Topology](path/to/your/topology-screenshot.png)
-*(Replace the path above with the actual link to your network diagram screenshot)*
+## 🖧 Network Topology
+The topology consists of:
+* **1 Router (Cisco 2911):** Configured for inter-VLAN routing.
+* **2 Layer 2 Switches (Cisco 2960):** Handling VLAN traffic.
+* **2 VLANs:** Representing distinct departments.
+    * VLAN 10 – HR Department
+    * VLAN 20 – Sales Department
+* **4 End Devices (PCs):** Connected to the respective switches.
 
-## ⚙️ Configuration Details
+### 📸 Topology Diagram
+<p align="center">
+  <img src="./images/topology.png" alt="VLAN Topology Diagram" width="80%">
+</p>
 
-### 1. VLAN Segmentation
-Two distinct VLANs were created to logically separate the network traffic:
-* **VLAN 10:** Named `HR_Dept`
-* **VLAN 20:** Named `Sales_Dept`
+> *Note: Ensure the image file is located in an `images` folder in your repository.*
 
-### 2. Switch Configuration
-Each switch was configured using the Cisco IOS CLI. Access ports were assigned to their specific VLANs to ensure device isolation.
+## 🏷️ VLAN Design
 
-**Example Configuration (Switch 1 - Sales Dept):**
-```cisco
-Switch> enable
-Switch# configure terminal
-Switch(config)# vlan 20
-Switch(config-vlan)# name Sales_Dept
-Switch(config-vlan)# exit
-Switch(config)# interface range fa0/1 - 24
-Switch(config-if-range)# switchport mode access
-Switch(config-if-range)# switchport access vlan 20
-Switch(config-if-range)# exit
-Switch# write memory
+| VLAN ID | VLAN Name | Department |
+| :--- | :--- | :--- |
+| **10** | HR_Department | Human Resources |
+| **20** | Sales_Dept | Sales |
+
+## 🌐 IP Addressing Scheme
+
+### VLAN 10 – HR Department
+| Device | IP Address |
+| :--- | :--- |
+| **PC0** | 192.168.29.11 |
+| **PC1** | 192.168.20.12 |
+
+### VLAN 20 – Sales Department
+| Device | IP Address |
+| :--- | :--- |
+| **PC2** | 192.168.10.13 |
+| **PC3** | 192.168.10.14 |
+
+## 🧠 Skills Demonstrated
+* ✅ **VLAN Creation & Management:** Configuring VLAN databases on switches.
+* ✅ **Access Port Configuration:** Assigning switch ports to specific VLANs.
+* ✅ **Inter-VLAN Routing:** Configuring Router-on-a-Stick (or physical interfaces) for routing between subnets.
+* ✅ **IP Addressing:** Managing static IP allocation for end devices.
+* ✅ **Network Design:** implementing Enterprise LAN principles.
+* ✅ **Troubleshooting:** Verifying connectivity using Ping and Simulation mode.
+
+---
+
+## 🚀 How to Run
+1.  **Clone the Repo:**
+    ```bash
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    ```
+2.  **Open Packet Tracer:** Launch Cisco Packet Tracer (Version 8.0+ recommended).
+3.  **Load File:** Open the `.pkt` project file included in this repository.
+4.  **Test Connectivity:** Use the Command Prompt on PC0 to ping PC2 to verify Inter-VLAN routing.
+
+## 👤 Author
+**[Your Name]**
