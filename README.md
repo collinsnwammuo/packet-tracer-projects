@@ -4,7 +4,7 @@
 
 ##  🎯 Objective
 
-This repository contains a curated collection of Cisco Packet Tracer labs designed to demonstrate practical networking skills—including routing, switching, VLAN implementation, IP addressing, and security configurations. These projects simulate real-world enterprise environments and showcase proficiency in designing, configuring, and troubleshooting computer networks.
+This repository contains a curated collection of Cisco Packet Tracer labs designed to demonstrate practical networking skills, including routing, switching, VLAN implementation, IP addressing, and security configurations. These projects simulate real-world enterprise environments and showcase proficiency in designing, configuring, and troubleshooting computer networks.
 
 ##  🧠 Skills Demonstrated
 
