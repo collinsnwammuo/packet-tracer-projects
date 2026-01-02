@@ -60,13 +60,12 @@ Metric calculation
 
 Load balancing demonstration
 
-###  4️⃣ DHCP Server Configuration With Multiple Switches 👉 Open
+2️⃣ **DHCP Server Configuration With Multiple Switches** 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/DHCP%20Server%20Configuration%20With%20Multiple%20Switches)
 
-Classless routing
-
-Route summarization
-
-Split-horizon demonstration
+* Centralized DHCP Server (Multi-Pool)
+* DHCP Relay Agent (`ip helper-address`)
+* Inter-Network IP allocation
+* Includes topology image + .pkt file
 
 ###  5️⃣ Network Security Lab 👉 Open
 
