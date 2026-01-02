@@ -24,13 +24,6 @@ The topology consists of:
     * VLAN 20 – Sales Department
 * **4 End Devices (PCs):** Connected to the respective switches.
 
-### 📸 Topology Diagram
-<p align="center">
-  <img src="./images/topology.png" alt="VLAN Topology Diagram" width="80%">
-</p>
-
-> *Note: Ensure the image file is located in an `images` folder in your repository.*
-
 ## 🏷️ VLAN Design
 
 | VLAN ID | VLAN Name | Department |
@@ -62,14 +55,5 @@ The topology consists of:
 
 ---
 
-## 🚀 How to Run
-1.  **Clone the Repo:**
-    ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    ```
-2.  **Open Packet Tracer:** Launch Cisco Packet Tracer (Version 8.0+ recommended).
-3.  **Load File:** Open the `.pkt` project file included in this repository.
-4.  **Test Connectivity:** Use the Command Prompt on PC0 to ping PC2 to verify Inter-VLAN routing.
-
 ## 👤 Author
-**[Your Name]**
+**[Collins Nwammuo]**
