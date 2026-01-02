@@ -1,9 +1,6 @@
 🔐 VLAN Segmentation & Inter-VLAN Routing
-SOC & Network Security Lab (Cisco Packet Tracer)
-📌 Project Overview
 
 This project demonstrates network segmentation as a security control using VLANs and controlled inter-VLAN routing in a simulated enterprise environment. The lab models how organizations reduce attack surface, limit lateral movement, and improve monitoring by separating departments into logical network segments.
-
 The exercise is framed from a SOC and cybersecurity perspective, emphasizing traffic control, segmentation enforcement, and verification of secure communication paths.
 
 🎯 Security Objectives
