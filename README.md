@@ -60,7 +60,7 @@ Metric calculation
 
 Load balancing demonstration
 
-###  4️⃣ WAN Topology with RIP v2 👉 Open
+###  4️⃣ DHCP Server Configuration With Multiple Switches 👉 Open
 
 Classless routing
 
