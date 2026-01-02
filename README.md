@@ -48,15 +48,12 @@ Troubleshooting using simulation mode & PDU analysis
 * Inter-Network IP allocation
 * Includes topology image + .pkt file
   
-###  2️⃣ OSPF Multi-Area Implementation 👉 Open
+###  3️⃣ OSPF Single-Area Implementation 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/OSPF%20Multi-Area%20Implementation)
 
-OSPF Area 0 backbone
-
-DR/BDR behavior
-
-Router-ID configuration
-
-Shows routing table convergence
+* Single-Area (Area 0) Backbone
+* Serial WAN Mesh Topology
+* Wildcard Mask Configuration
+* Includes topology image + .pkt file
 
 ###  3️⃣ EIGRP Enterprise Network 👉 Open
 
