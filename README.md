@@ -35,7 +35,7 @@ Troubleshooting using simulation mode & PDU analysis
 
 ##  🗂️ Projects Included
 
-###  1️⃣ VLAN Segmentation & Inter-VLAN Routing** 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/VLAN%20Segmentation%20and%20Inter-VLAN%20Routing)
+###  1️⃣ VLAN Segmentation & Inter-VLAN Routing 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/VLAN%20Segmentation%20and%20Inter-VLAN%20Routing)
 
 * VLAN 10/20/30 segmentation
 * Trunk links & native VLAN config
