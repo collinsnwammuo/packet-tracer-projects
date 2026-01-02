@@ -42,6 +42,13 @@ Troubleshooting using simulation mode & PDU analysis
 * Router-on-a-Stick implementation
 * Includes topology image + .pkt file
 
+###  2️⃣ DHCP Server Configuration With Multiple Switches 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/DHCP%20Server%20Configuration%20With%20Multiple%20Switches](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/DHCP%20Server%20Configuration)
+
+* Centralized DHCP Server (Multi-Pool)
+* DHCP Relay Agent (`ip helper-address`)
+* Inter-Network IP allocation
+* Includes topology image + .pkt file
+  
 ###  2️⃣ OSPF Multi-Area Implementation 👉 Open
 
 OSPF Area 0 backbone
@@ -60,12 +67,7 @@ Metric calculation
 
 Load balancing demonstration
 
-2️⃣ **DHCP Server Configuration With Multiple Switches** 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/DHCP%20Server%20Configuration%20With%20Multiple%20Switches)
 
-* Centralized DHCP Server (Multi-Pool)
-* DHCP Relay Agent (`ip helper-address`)
-* Inter-Network IP allocation
-* Includes topology image + .pkt file
 
 ###  5️⃣ Network Security Lab 👉 Open
 
