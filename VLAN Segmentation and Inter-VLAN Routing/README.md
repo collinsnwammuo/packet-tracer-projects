@@ -1,4 +1,4 @@
-# 🔹 VLAN Segmentation and Inter-VLAN Routing (Cisco Packet Tracer)
+# 🔹 VLAN Segmentation and Inter-VLAN Routing
 
 ![Cisco Packet Tracer](https://img.shields.io/badge/Tool-Cisco%20Packet%20Tracer-blue?style=flat&logo=cisco)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
@@ -36,7 +36,7 @@ The topology consists of:
 ### VLAN 10 – HR Department
 | Device | IP Address |
 | :--- | :--- |
-| **PC0** | 192.168.29.11 |
+| **PC0** | 192.168.20.11 |
 | **PC1** | 192.168.20.12 |
 
 ### VLAN 20 – Sales Department
