@@ -101,8 +101,4 @@ RIP v2 WAN Lab	RIP v2 routing & summarization	👉 Open
 Security Lab	ACLs, DHCP Snooping, DAI	👉 Open
 
 NAT (PAT) Lab	NAT overload for internet access	👉 Open
-##  🖼️ Gallery
 
-Add your topology screenshots here. Suggested layout:
-
-<p align="center"> <img src="./images/vlan-topology.png" width="400" alt="VLAN Lab Topology"/> <img src="./images/ospf-topology.png" width="400" alt="OSPF Lab Topology"/> </p> <p align="center"> <img src="./images/security-lab.png" width="400" alt="Security Lab"/> <img src="./images/nat-topology.png" width="400" alt="NAT Lab Topology"/> </p>
