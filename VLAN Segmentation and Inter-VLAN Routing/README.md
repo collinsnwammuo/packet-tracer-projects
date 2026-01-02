@@ -1,104 +1,168 @@
-🔹 VLAN Segmentation and Inter-VLAN Routing (Cisco Packet Tracer)
-📌 Project Overview
+🔐 VLAN Segmentation & Inter-VLAN Routing
+Cisco Packet Tracer | SOC / Blue Team Network Security Lab
+<p align="center"> <img src="https://img.shields.io/badge/Network_Security-Blue_Team-0A66C2?style=for-the-badge" /> <img src="https://img.shields.io/badge/Cisco-Packet_Tracer-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" /> <img src="https://img.shields.io/badge/VLAN_Segmentation-Enterprise_LAN-2E8B57?style=for-the-badge" /> <img src="https://img.shields.io/badge/SOC_Relevant-Yes-8B0000?style=for-the-badge" /> </p>
+🛡️ Project Overview
 
-This project demonstrates VLAN segmentation and inter-VLAN routing in a simulated enterprise network using Cisco Packet Tracer. The network is designed to separate departments into different VLANs while allowing controlled communication between them through a router.
-The lab highlights best practices in Layer 2 segmentation, Layer 3 routing, and basic enterprise LAN design.
+This lab simulates enterprise-grade network segmentation using VLANs and inter-VLAN routing, a foundational security control used in Security Operations Centers (SOC) to reduce attack surface and limit lateral movement.
 
-🎯 Objectives
+Using Cisco Packet Tracer, the network is architected to isolate departmental traffic at Layer 2 while enabling controlled Layer 3 communication through a routing device. This mirrors real-world enterprise environments where segmentation is critical for threat containment, monitoring, and incident response.
 
-Implement VLAN-based network segmentation for multiple departments
+🎯 Security Objectives
 
-Configure access ports and assign VLANs on Cisco switches
+Enforce network segmentation using VLANs
 
-Enable inter-VLAN communication using a router
+Reduce lateral movement between departments
 
-Verify connectivity between hosts across different VLANs
+Implement controlled inter-VLAN communication
 
-Reinforce practical understanding of VLANs, routing, and subnetting
+Apply least-privilege network design principles
 
-🖧 Network Topology
+Strengthen SOC understanding of internal network visibility
 
-The topology consists of:
+🖧 SOC-Relevant Network Architecture
 
-1 Router (Cisco 2911) for inter-VLAN routing
+The simulated enterprise environment consists of:
 
-2 Layer 2 Switches (Cisco 2960)
+Cisco 2911 Router
 
-2 VLANs representing departments
+Central Layer 3 routing point
 
-VLAN 10 – HR Department
+Enforces traffic flow between VLANs
 
-VLAN 20 – Sales Department
+2 Cisco 2960 Layer 2 Switches
 
-4 End Devices (PCs)
+Enforce VLAN-based isolation
 
+2 Security Zones (VLANs)
 
-🏷️ VLAN Design
-VLAN ID	VLAN Name	Department
-10	HR_Department	Human Resources
-20	Sales_Dept	Sales
-| VLAN ID                                       | VLAN Name       | Department     |
-|-----------------------------------------------|-----------------|----------------|
-| 10                                            | HR_Dept         | Human Resources|
-| 20                                            | Sales_Dept      | Sales          |
+Department-based segmentation
 
-🌐 IP Addressing Scheme
-| VLAN ID                                       | VLAN Name       | Department     |
-|-----------------------------------------------|-----------------|----------------|
-| 10                                            | HR_Dept         | Human Resources|
-| 20                                            | Sales_Dept      | Sales          |VLAN 10 – HR Department
-Device	IP Address
-PC0	192.168.29.11
-PC1	192.168.20.12
-VLAN 20 – Sales Department
-Device	IP Address
-PC2	192.168.10.13
-PC3	192.168.10.14
-⚙️ Configuration Summary
-🔹 Switch Configuration
+4 Endpoints
 
-VLANs created and named
+Simulated user devices generating internal traffic
 
-Access ports assigned to respective VLANs
+This design reflects real SOC-monitored internal networks, where east–west traffic is closely observed.
 
-Configuration saved to NVRAM
+🏷️ VLAN-Based Security Zones
+🔹 VLAN 10 — HR Security Zone
 
-Example:
+Contains sensitive personnel systems
+
+Isolated to protect confidential HR data
+
+Limits exposure to internal threats
+
+🔹 VLAN 20 — Sales Security Zone
+
+Handles business and customer-related systems
+
+Segmented to prevent unauthorized access to HR assets
+
+Security Benefit:
+Segmentation ensures that a compromise in one department does not automatically expose other internal systems.
+
+🌐 IP Addressing (Logical Separation)
+HR VLAN (VLAN 10)
+
+PC0 → 192.168.29.11
+
+PC1 → 192.168.20.12
+
+Sales VLAN (VLAN 20)
+
+PC2 → 192.168.10.13
+
+PC3 → 192.168.10.14
+
+Distinct subnets enhance traffic visibility, policy enforcement, and incident scoping during investigations.
+
+⚙️ Security Configuration Summary
+🔹 Switch Hardening & VLAN Enforcement
+
+VLANs explicitly created and named
+
+Access ports locked to assigned VLANs
+
+Prevents VLAN hopping via proper port configuration
 
 vlan 20
  name Sales_Dept
+
 interface range fa0/1 - 24
  switchport mode access
  switchport access vlan 20
 
-🔹 Router Configuration
 
-Router interfaces configured with IP addresses
+SOC Value:
+Clear Layer 2 boundaries simplify traffic analysis and alert triage.
 
-Acts as the default gateway for VLANs
+🔹 Router as a Controlled Trust Boundary
 
-Enables inter-VLAN routing
+Router interfaces configured as VLAN gateways
 
-🔍 Verification & Testing
+All cross-VLAN traffic forced through Layer 3
 
-show vlan brief used to verify VLAN creation and port assignments
+Enables future implementation of:
 
-Successful ping tests between hosts in different VLANs
+ACLs
 
-Confirmed correct routing and VLAN segmentation
+Traffic inspection
 
-📸 VLAN Verification Output
-<p align="center"> <img src="./images/vlan-brief.png" alt="VLAN Brief Output" width="600"> </p>
-🧠 Skills Demonstrated
+Logging & monitoring
 
-VLAN creation and management
+This reflects how SOC teams enforce inter-zone visibility and control.
 
-Access port configuration
+🔍 Validation & Monitoring Checks
 
-Inter-VLAN routing concepts
+Verification steps aligned with SOC operational workflows:
 
-IP addressing and subnetting
+show vlan brief confirms segmentation enforcement
 
-Enterprise LAN design principles
+Cross-VLAN ICMP tests validate allowed communication
 
-Network verification and troubleshooting
+Routing verification ensures predictable traffic paths
+
+Result:
+Traffic behaves as expected with no unauthorized cross-zone access.
+
+📸 Evidence: VLAN Configuration Verification
+<p align="center"> <img src="./images/vlan-brief.png" alt="VLAN Verification Output" width="650"> </p>
+🧠 Blue Team Skills Demonstrated
+
+Network segmentation as a security control
+
+VLAN enforcement and validation
+
+Inter-VLAN traffic analysis
+
+Internal attack surface reduction
+
+Enterprise LAN security design
+
+Network troubleshooting and verification
+
+🚨 Threats Mitigated
+
+Unauthorized lateral movement
+
+Internal reconnaissance across departments
+
+Accidental data exposure between business units
+
+Flat network security risks
+
+📊 SOC Relevance
+
+This lab directly supports SOC responsibilities such as:
+
+Understanding internal network architecture
+
+Interpreting east–west traffic patterns
+
+Designing defensible enterprise networks
+
+Supporting SIEM correlation with segmented traffic
+
+🚀 Summary
+
+VLAN segmentation combined with controlled inter-VLAN routing is a core defensive strategy in modern enterprises. This project demonstrates how network design directly supports SOC detection, containment, and response efforts.
