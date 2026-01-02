@@ -3,87 +3,87 @@ Cisco Packet Tracer | SOC / Blue Team Network Security Lab
 <p align="center"> <img src="https://img.shields.io/badge/Network_Security-Blue_Team-0A66C2?style=for-the-badge" /> <img src="https://img.shields.io/badge/Cisco-Packet_Tracer-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" /> <img src="https://img.shields.io/badge/VLAN_Segmentation-Enterprise_LAN-2E8B57?style=for-the-badge" /> <img src="https://img.shields.io/badge/SOC_Relevant-Yes-8B0000?style=for-the-badge" /> </p>
 🛡️ Project Overview
 
-This lab simulates enterprise-grade network segmentation using VLANs and inter-VLAN routing, a foundational security control used in Security Operations Centers (SOC) to reduce attack surface and limit lateral movement.
+This project simulates enterprise-grade network segmentation using VLANs and inter-VLAN routing, a foundational security control widely used in Security Operations Centers (SOC).
 
-Using Cisco Packet Tracer, the network is architected to isolate departmental traffic at Layer 2 while enabling controlled Layer 3 communication through a routing device. This mirrors real-world enterprise environments where segmentation is critical for threat containment, monitoring, and incident response.
+The lab demonstrates how Layer 2 isolation combined with Layer 3 traffic control reduces attack surface, improves visibility, and supports effective threat containment.
 
 🎯 Security Objectives
 
-Enforce network segmentation using VLANs
+Enforce VLAN-based network segmentation
 
-Reduce lateral movement between departments
+Reduce lateral movement between internal zones
 
-Implement controlled inter-VLAN communication
+Enable controlled inter-VLAN communication
 
 Apply least-privilege network design principles
 
-Strengthen SOC understanding of internal network visibility
+Strengthen SOC understanding of internal traffic flows
 
 🖧 SOC-Relevant Network Architecture
 
-The simulated enterprise environment consists of:
+The simulated enterprise network consists of:
 
-Cisco 2911 Router
+1 × Cisco 2911 Router
 
-Central Layer 3 routing point
+Provides inter-VLAN routing
 
-Enforces traffic flow between VLANs
+Serves as a controlled trust boundary
 
-2 Cisco 2960 Layer 2 Switches
+2 × Cisco 2960 Layer 2 Switches
 
-Enforce VLAN-based isolation
+Enforce VLAN segmentation
 
-2 Security Zones (VLANs)
+Limit unauthorized access
 
-Department-based segmentation
+2 × VLAN Security Zones
 
-4 Endpoints
+Department-based logical separation
 
-Simulated user devices generating internal traffic
+4 × End Devices (PCs)
 
-This design reflects real SOC-monitored internal networks, where east–west traffic is closely observed.
+Generate internal east–west traffic
 
 🏷️ VLAN-Based Security Zones
-🔹 VLAN 10 — HR Security Zone
+VLAN 10 — HR Security Zone
 
-Contains sensitive personnel systems
+Hosts sensitive HR systems
 
-Isolated to protect confidential HR data
+Isolated to protect confidential personnel data
 
-Limits exposure to internal threats
+Reduces exposure to internal threats
 
-🔹 VLAN 20 — Sales Security Zone
+VLAN 20 — Sales Security Zone
 
-Handles business and customer-related systems
+Hosts sales and business systems
 
 Segmented to prevent unauthorized access to HR assets
 
 Security Benefit:
-Segmentation ensures that a compromise in one department does not automatically expose other internal systems.
+Compromise of one VLAN does not automatically propagate to others.
 
 🌐 IP Addressing (Logical Separation)
-HR VLAN (VLAN 10)
+VLAN 10 — Human Resources
 
 PC0 → 192.168.29.11
 
 PC1 → 192.168.20.12
 
-Sales VLAN (VLAN 20)
+VLAN 20 — Sales
 
 PC2 → 192.168.10.13
 
 PC3 → 192.168.10.14
 
-Distinct subnets enhance traffic visibility, policy enforcement, and incident scoping during investigations.
+Distinct subnets improve traffic attribution, alert correlation, and incident scoping.
 
 ⚙️ Security Configuration Summary
-🔹 Switch Hardening & VLAN Enforcement
+🔹 Switch Configuration (Segmentation Enforcement)
 
 VLANs explicitly created and named
 
-Access ports locked to assigned VLANs
+Access ports statically assigned
 
-Prevents VLAN hopping via proper port configuration
+Prevents VLAN hopping attacks
 
 vlan 20
  name Sales_Dept
@@ -92,46 +92,40 @@ interface range fa0/1 - 24
  switchport mode access
  switchport access vlan 20
 
-
-SOC Value:
-Clear Layer 2 boundaries simplify traffic analysis and alert triage.
-
-🔹 Router as a Controlled Trust Boundary
+🔹 Router Configuration (Controlled Inter-Zone Routing)
 
 Router interfaces configured as VLAN gateways
 
 All cross-VLAN traffic forced through Layer 3
 
-Enables future implementation of:
+Supports future controls such as:
 
-ACLs
+Access Control Lists (ACLs)
 
-Traffic inspection
+Traffic logging
 
-Logging & monitoring
+Security inspection
 
-This reflects how SOC teams enforce inter-zone visibility and control.
+🔍 Validation & Monitoring
 
-🔍 Validation & Monitoring Checks
+Verification steps aligned with SOC workflows:
 
-Verification steps aligned with SOC operational workflows:
+show vlan brief to confirm VLAN enforcement
 
-show vlan brief confirms segmentation enforcement
+ICMP ping tests to validate authorized communication
 
-Cross-VLAN ICMP tests validate allowed communication
-
-Routing verification ensures predictable traffic paths
+Routing checks to ensure predictable traffic paths
 
 Result:
-Traffic behaves as expected with no unauthorized cross-zone access.
+VLAN isolation and routing function correctly with no unauthorized access.
 
-📸 Evidence: VLAN Configuration Verification
+📸 Evidence: VLAN Verification Output
 <p align="center"> <img src="./images/vlan-brief.png" alt="VLAN Verification Output" width="650"> </p>
 🧠 Blue Team Skills Demonstrated
 
-Network segmentation as a security control
+Network segmentation as a defensive control
 
-VLAN enforcement and validation
+VLAN enforcement and verification
 
 Inter-VLAN traffic analysis
 
@@ -139,30 +133,30 @@ Internal attack surface reduction
 
 Enterprise LAN security design
 
-Network troubleshooting and verification
+Network troubleshooting
 
 🚨 Threats Mitigated
 
 Unauthorized lateral movement
 
-Internal reconnaissance across departments
+Internal reconnaissance
 
-Accidental data exposure between business units
+Accidental cross-department data exposure
 
 Flat network security risks
 
 📊 SOC Relevance
 
-This lab directly supports SOC responsibilities such as:
+This project supports SOC activities such as:
 
 Understanding internal network architecture
 
-Interpreting east–west traffic patterns
+Monitoring east–west traffic
 
-Designing defensible enterprise networks
+Supporting SIEM correlation rules
 
-Supporting SIEM correlation with segmented traffic
+Enabling effective incident containment
 
 🚀 Summary
 
-VLAN segmentation combined with controlled inter-VLAN routing is a core defensive strategy in modern enterprises. This project demonstrates how network design directly supports SOC detection, containment, and response efforts.
+This lab demonstrates how secure network architecture directly supports SOC detection, investigation, and response. VLAN segmentation remains a core defensive control in modern enterprise security environments.
