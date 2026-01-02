@@ -1,94 +1,60 @@
-🔐 VLAN Segmentation & Inter-VLAN Routing
+🔹 VLAN Segmentation and Inter-VLAN Routing (Cisco Packet Tracer)
+📌 Project Overview
 
-This project demonstrates network segmentation as a security control using VLANs and controlled inter-VLAN routing in a simulated enterprise environment. The lab models how organizations reduce attack surface, limit lateral movement, and improve monitoring by separating departments into logical network segments.
-The exercise is framed from a SOC and cybersecurity perspective, emphasizing traffic control, segmentation enforcement, and verification of secure communication paths.
+This project demonstrates VLAN segmentation and inter-VLAN routing in a simulated enterprise network using Cisco Packet Tracer. The network is designed to separate departments into different VLANs while allowing controlled communication between them through a router.
+The lab highlights best practices in Layer 2 segmentation, Layer 3 routing, and basic enterprise LAN design.
 
-🎯 Security Objectives
+🎯 Objectives
 
-Implement VLAN-based network segmentation to isolate departments
+Implement VLAN-based network segmentation for multiple departments
 
-Reduce lateral movement risk between user groups
+Configure access ports and assign VLANs on Cisco switches
 
-Control inter-VLAN traffic using a Layer 3 gateway
+Enable inter-VLAN communication using a router
 
-Validate segmentation effectiveness through connectivity testing
+Verify connectivity between hosts across different VLANs
 
-Strengthen understanding of network-level security architecture
+Reinforce practical understanding of VLANs, routing, and subnetting
 
-🛡️ Security Use Case (SOC Perspective)
+🖧 Network Topology
 
-In a real enterprise environment:
+The topology consists of:
 
-VLANs act as a first line of defense against internal threats
+1 Router (Cisco 2911) for inter-VLAN routing
 
-Segmentation limits the blast radius of:
+2 Layer 2 Switches (Cisco 2960)
 
-Compromised endpoints
+2 VLANs representing departments
 
-Malware outbreaks
+VLAN 10 – HR Department
 
-Insider threats
+VLAN 20 – Sales Department
 
-Controlled routing enables:
+4 End Devices (PCs)
 
-Easier monitoring
+📸 Topology Diagram
+<p align="center"> <img src="./images/topology.png" alt="VLAN Topology Diagram" width="600"> </p>
+🏷️ VLAN Design
+VLAN ID	VLAN Name	Department
+10	HR_Department	Human Resources
+20	Sales_Dept	Sales
+🌐 IP Addressing Scheme
+VLAN 10 – HR Department
+Device	IP Address
+PC0	192.168.29.11
+PC1	192.168.20.12
+VLAN 20 – Sales Department
+Device	IP Address
+PC2	192.168.10.13
+PC3	192.168.10.14
+⚙️ Configuration Summary
+🔹 Switch Configuration
 
-Policy enforcement
+VLANs created and named
 
-Log correlation in SIEM systems
+Access ports assigned to respective VLANs
 
-This lab simulates that defensive network design principle.
-
-🖧 Network Architecture
-
-The simulated environment includes:
-
-Router (Cisco 2911)
-
-Functions as a segmentation gateway
-
-Layer 2 Switches (Cisco 2960)
-
-Enforce VLAN separation at access layer
-
-Departmental VLANs
-
-VLAN 10 – HR (Sensitive Data)
-
-VLAN 20 – Sales (Business Operations)
-
-End Hosts
-
-User endpoints representing employee devices
-
-📸 Network Topology
-<p align="center"> <img src="./images/topology.png" alt="VLAN Segmentation Topology" width="600"> </p>
-🏷️ VLAN Security Design
-VLAN ID	VLAN Name	Security Purpose
-10	HR_Department	Protects sensitive employee data
-20	Sales_Dept	Isolates business operations
-
-Security Rationale:
-HR systems often store PII and confidential records, requiring stronger isolation from general business traffic.
-
-🌐 IP Addressing (Logical Segmentation)
-
-Each VLAN operates in a separate IP subnet, enabling:
-
-Clear traffic boundaries
-
-Easier detection of abnormal cross-VLAN traffic
-
-Improved log interpretation in monitoring tools
-
-⚙️ Security-Focused Configuration Summary
-🔹 Switch (Layer 2 Security Enforcement)
-
-VLANs explicitly created and named
-
-Access ports locked to specific VLANs
-
-Prevents unauthorized VLAN hopping
+Configuration saved to NVRAM
 
 Example:
 
@@ -98,73 +64,34 @@ interface range fa0/1 - 24
  switchport mode access
  switchport access vlan 20
 
+🔹 Router Configuration
 
-SOC Relevance:
-Improper VLAN configuration is a common root cause of internal breaches.
+Router interfaces configured with IP addresses
 
-🔹 Router (Controlled Inter-VLAN Routing)
+Acts as the default gateway for VLANs
 
-Router acts as a single choke point for cross-VLAN traffic
+Enables inter-VLAN routing
 
-Each VLAN uses the router as its default gateway
+🔍 Verification & Testing
 
-Enables future application of:
+show vlan brief used to verify VLAN creation and port assignments
 
-ACLs
+Successful ping tests between hosts in different VLANs
 
-Traffic logging
+Confirmed correct routing and VLAN segmentation
 
-IDS/IPS inspection
+📸 VLAN Verification Output
+<p align="center"> <img src="./images/vlan-brief.png" alt="VLAN Brief Output" width="600"> </p>
+🧠 Skills Demonstrated
 
-🔍 Validation & Security Testing
-Tests Performed
+VLAN creation and management
 
-Verified VLAN separation using show vlan brief
+Access port configuration
 
-Tested permitted inter-VLAN connectivity using ICMP
+Inter-VLAN routing concepts
 
-Confirmed that communication occurs only via the router
+IP addressing and subnetting
 
-📸 VLAN Verification
-<p align="center"> <img src="./images/vlan-brief.png" alt="VLAN Verification Output" width="600"> </p>
+Enterprise LAN design principles
 
-Security Outcome:
-Traffic between VLANs is predictable, controlled, and observable — a requirement for effective SOC monitoring.
-
-🧠 SOC & Cybersecurity Skills Demonstrated
-
-Network segmentation as a security control
-
-Understanding of lateral movement prevention
-
-Secure Layer 2 and Layer 3 design principles
-
-Traffic flow analysis and verification
-
-Enterprise network defense fundamentals
-
-Foundations for IDS, firewall, and SIEM integration
-
-🛠️ Tools & Technologies
-
-Cisco Packet Tracer
-
-Cisco IOS CLI
-
-VLANs & subnetting
-
-Routing and gateway enforcement
-
-Network traffic validation
-
-🔮 SOC Expansion Opportunities
-
-This lab can be extended to simulate real SOC workflows:
-
-Apply ACLs to restrict inter-VLAN access
-
-Mirror traffic for IDS/IPS (Snort / Suricata) analysis
-
-Generate logs for SIEM ingestion
-
-Simulate insider threat or compromised host scenarios
+Network verification and troubleshooting
