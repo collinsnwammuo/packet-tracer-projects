@@ -30,16 +30,16 @@ The network consists of three routers connected in a mesh topology, managing tra
 
 ### Router 2 (Web Server Protection)
 Configuring ACL #1 to deny the specific subnet and permit everything else.
-```cisco
+`cisco
 R2(config)# access-list 1 deny 192.168.11.0 0.0.0.255
 R2(config)# access-list 1 permit any
 R2(config)# interface GigabitEthernet0/0
-R2(config-if)# ip access-group 1 out```
+R2(config-if)# ip access-group 1 out`
 
 ###  Router 3 (Remote LAN Protection)
 Configuring ACL #1 to deny PC1's subnet from reaching PC3.
-```Cisco CLI
+`cisco
 R3(config)# access-list 1 deny 192.168.10.0 0.0.0.255
 R3(config)# access-list 1 permit any
 R3(config)# interface GigabitEthernet0/0
-R3(config-if)# ip access-group 1 out
+R3(config-if)# ip access-group 1 out`
