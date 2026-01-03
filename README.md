@@ -55,7 +55,7 @@ Troubleshooting using simulation mode & PDU analysis
 * Wildcard Mask Configuration
 * Includes topology image + .pkt file
 
-4️⃣ **Access Control Lists (ACL) Implementation** 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/Access%20Control%20Lists%20(ACL))
+###  4️⃣ Access Control Lists (ACL) Implementation 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/Access%20Control%20Lists%20(ACL).
 
 * Standard & Extended ACL configurations
 * Traffic filtering by Protocol (HTTP, FTP, ICMP)
