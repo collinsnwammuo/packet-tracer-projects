@@ -52,3 +52,15 @@ The configuration was verified by pinging between devices to ensure the blocks w
 | **PC2 (192.168.11.10)** | WebServer (192.168.20.254) | ❌ **Failed** (Blocked by R2) | Request Timed Out |
 | **PC2 (192.168.11.10)** | PC3 (192.168.30.10) | ✅ **Success** (Permit Any) | Reply Received |
 | **PC1 (192.168.10.10)** | WebServer (192.168.20.254) | ✅ **Success** (Permit Any) | Reply Received |
+
+🧠 Skills Demonstrated
+*  Standard ACL Configuration: Filtering based on Source IP.
+
+*  ACL Placement: Understanding "Outbound" application close to the destination.
+
+*  Traffic Filtering: Deny/Permit logic and implicit deny handling.
+
+*  Network Troubleshooting: Verifying connectivity using Ping and ICMP analysis.
+
+👤 Author
+Collins Nwammuo
