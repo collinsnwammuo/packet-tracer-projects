@@ -62,5 +62,4 @@ The configuration was verified by pinging between devices to ensure the blocks w
 
 *  Network Troubleshooting: Verifying connectivity using Ping and ICMP analysis.
 
-👤 Author
-Collins Nwammuo
+
