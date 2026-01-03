@@ -30,16 +30,25 @@ The network consists of three routers connected in a mesh topology, managing tra
 
 ### Router 2 (Web Server Protection)
 Configuring ACL #1 to deny the specific subnet and permit everything else.
-`cisco
+```cisco
 R2(config)# access-list 1 deny 192.168.11.0 0.0.0.255
 R2(config)# access-list 1 permit any
 R2(config)# interface GigabitEthernet0/0
-R2(config-if)# ip access-group 1 out`
-
+R2(config-if)# ip access-group 1 out
+```
 ###  Router 3 (Remote LAN Protection)
 Configuring ACL #1 to deny PC1's subnet from reaching PC3.
-`cisco
+```cisco
 R3(config)# access-list 1 deny 192.168.10.0 0.0.0.255
 R3(config)# access-list 1 permit any
 R3(config)# interface GigabitEthernet0/0
-R3(config-if)# ip access-group 1 out`
+R3(config-if)# ip access-group 1 out
+```
+✅ Verification & Testing
+The configuration was verified by pinging between devices to ensure the blocks were active and valid traffic was allowed.
+| Source | Destination | Expected Result | Actual Result |
+| :--- | :--- | :--- | :--- |
+| **PC1 (192.168.10.10)** | PC3 (192.168.30.10) | ❌ **Failed** (Blocked by R3) | Request Timed Out |
+| **PC2 (192.168.11.10)** | WebServer (192.168.20.254) | ❌ **Failed** (Blocked by R2) | Request Timed Out |
+| **PC2 (192.168.11.10)** | PC3 (192.168.30.10) | ✅ **Success** (Permit Any) | Reply Received |
+| **PC1 (192.168.10.10)** | WebServer (192.168.20.254) | ✅ **Success** (Permit Any) | Reply Received |
