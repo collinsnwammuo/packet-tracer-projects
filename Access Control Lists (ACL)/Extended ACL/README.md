@@ -46,7 +46,7 @@ R1(config-ext-nacl)# exit
 R1(config)# interface GigabitEthernet0/1
 R1(config-if)# ip access-group HTTP_ONLY in
 ```
-✅ Verification & Testing
+###  ✅ Verification & Testing
 The implementation was verified by testing service accessibility and inter-VLAN connectivity.
 
 | Source | Destination | Service/Protocol | Expected Result | Actual Result |
@@ -57,7 +57,7 @@ The implementation was verified by testing service accessibility and inter-VLAN 
 | **PC2** | Server | HTTP (80) | ✅ **Allowed** | Page Loaded |
 | **PC2** | Server | FTP (21) | ❌ **Denied** | Request Failed |
 
-🧠 Skills Demonstrated
+###  🧠 Skills Demonstrated
 * Extended ACLs: Filtering by Port (21/80) and Protocol (TCP/ICMP).
 * Named vs. Numbered ACLs: Implementing both configuration styles.
 * Wildcard Masks: Calculating precise masks for /27 and /28 subnets.
