@@ -64,6 +64,18 @@ Troubleshooting using simulation mode & PDU analysis
 * Includes topology image + .pkt file
 
 
+###  5️⃣ **EIGRP Enterprise Network** 👉 [Open](https://github.com/collinsnwammuo/Cisco-Packet-Tracer-Projects/tree/main/EIGRP%20Network)
+
+* Autonomous System (AS) configuration
+* DUAL Algorithm & Metric calculation
+* Unequal-Cost Load Balancing
+* Route Summarization
+* Includes topology image + .pkt file
+
+
+
+
+
 ###  3️⃣ EIGRP Enterprise Network 👉 Open
 
 Autonomous System configuration
