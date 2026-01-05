@@ -44,5 +44,4 @@ A ping test was performed from Laptop0 (192.168.10.10) to PC3 (192.168.30.15) in
 
 Result: Successful replies were received, confirming that EIGRP is correctly routing traffic across the mesh.
 
-**
 
