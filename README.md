@@ -75,7 +75,7 @@ Troubleshooting using simulation mode & PDU analysis
 
 
 
-
+<!--
 ###  3️⃣ EIGRP Enterprise Network 👉 Open
 
 Autonomous System configuration
@@ -99,6 +99,6 @@ DHCP Snooping & DAI
 Inside/outside NAT configuration
 
 Testing translations with PC traffic
-
+--!>
 
 
